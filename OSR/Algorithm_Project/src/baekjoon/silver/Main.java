@@ -11,5 +11,5 @@ public class Main {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		StringBuilder sb = new StringBuilder();
 
-	}
-}
+	} // end of main
+} // end of class
