@@ -12,4 +12,4 @@ public class Main {
 		StringBuilder sb = new StringBuilder();
 
 	} // end of main
-} // end of class
+} // end of class 	
