@@ -39,7 +39,7 @@ public class Main2567 {
 						int nr = r + dr[i];
 						int nc = c + dc[i];
 						// 범위 내에 있고, 주변이 1이라면 cnt 1 증가
-						if (0 <= nr && nr <= 102 && 0 <= nc && nc <= 102 && board[nr][nc] == 1)
+						if (0 <= nr && nr < 102 && 0 <= nc && nc < 102 && board[nr][nc] == 1)
 							cnt++;
 					}
 				}
