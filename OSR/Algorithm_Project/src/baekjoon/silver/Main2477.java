@@ -1,4 +1,4 @@
-package baekjoon.gold;
+package baekjoon.silver;
 
 import java.util.LinkedList;
 import java.util.List;
