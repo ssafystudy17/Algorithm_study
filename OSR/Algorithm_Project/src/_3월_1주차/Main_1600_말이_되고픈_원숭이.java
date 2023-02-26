@@ -15,7 +15,7 @@ public class Main_1600_말이_되고픈_원숭이 {
 	static boolean[][][] visited;
 	static int[] dr = { 1, -1, 0, 0 };
 	static int[] dc = { 0, 0, 1, -1 };
-	static int[] hr = { -2, -1, 1, 2, 2, 1, -1, -2 }; // 말 방향
+	static int[] hr = { -2, -1, 1, 2, 2, 1, -1, -2 }; // 말점프 방향
 	static int[] hc = { 1, 2, 2, 1, -1, -2, -2, -1 };
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
