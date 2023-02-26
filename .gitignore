@@ -895,3 +895,4 @@ FodyWeavers.xsd
 *.classpath
 *.project
 .DS_Store
+*.DS_Store
