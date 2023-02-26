@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 public class Main_14247_나무_자르기 {
@@ -21,19 +23,12 @@ public class Main_14247_나무_자르기 {
 	private static void sol() {
 		int cnt = 0;
 
-		for (int i = 0; i < N; i++) {
-			Arrays.sort(tree, new Comparator<int[]>() { // 오름차순 정렬
-				public int compare(int[] o1, int[] o2) {
-					return o2[0] - o1[0];
-				}
-			});
-
-			for (int j = 0; j < N; j++)
-				tree[j][0] += tree[j][1];
-
-			cnt += tree[0][0];
-			tree[0][0] = 0;
+		Arrays.sort(tree, (o1, o2) -> o1[1] - o2[1]); // 자라는 길이 순서로 정렬
+		for (int i = 0; i < tree.length; i++) {
+			System.out.println(Arrays.toString(tree[i]));
 		}
+		for (int i = 0; i < tree.length; i++)
+			cnt += tree[i][0] + tree[i][1] * i; // 자라는 길이가 작은 순으로 자르는게 가장 최적의 방법
 		System.out.println(cnt);
 	} // end of sol
 
@@ -48,6 +43,5 @@ public class Main_14247_나무_자르기 {
 		st = new StringTokenizer(br.readLine(), " ");
 		for (int i = 0; i < N; i++)
 			tree[i][1] = Integer.parseInt(st.nextToken());
-
 	} // end of input
 }
