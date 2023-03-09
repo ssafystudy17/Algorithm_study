@@ -23,17 +23,17 @@ public class 백준_13423_ThreeDots_2040ms {
 			st = new StringTokenizer(br.readLine(), " ");
 			for (int i = 0; i < N; i++)
 				dotLoc[i] = Integer.parseInt(st.nextToken());
-			Arrays.sort(dotLoc);
+			Arrays.sort(dotLoc); // 정렬해서 앞부터 조합짬
 			
 			int firstDiff;
 			for (int i = 0; i < N-2; i++) {
 				for (int j = i+1; j < N-1; j++) {
-					firstDiff = dotLoc[j]-dotLoc[i];
+					firstDiff = dotLoc[j]-dotLoc[i]; // 앞에두개 차이 미리 저장
 					for (int k = j+1; k < N; k++) {
-						if(firstDiff == dotLoc[k] - dotLoc[j]) {
+						if(firstDiff == dotLoc[k] - dotLoc[j]) { // 같으면 답이지
 							res++;
 							break;
-						} else if (firstDiff < dotLoc[k] - dotLoc[j])
+						} else if (firstDiff < dotLoc[k] - dotLoc[j]) // 커지면 뒤에껀 그냥 다 안됨
 							break;
 					}
 				}
