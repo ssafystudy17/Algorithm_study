@@ -24,7 +24,7 @@ public class BJ_보석상자_2792 {
 	// 2) N명보다 적거나 같다? -> mid값을 줄여봐야 함
 	private static void binarySearch() {
 		long start = 0;
-		long end = 4;
+		long end = Integer.MAX_VALUE;
 
 		while (start <= end) {
 			long tmpStuents = 0;
