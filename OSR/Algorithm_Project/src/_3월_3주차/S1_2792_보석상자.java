@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BJ_보석상자_2792 {
+public class S1_2792_보석상자 {
 	static BufferedReader br;
 	static StringTokenizer st;
 	static int N, M, answer;

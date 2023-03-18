@@ -18,14 +18,14 @@ public class S1_1946_신입사원 {
 	}
 
 	private static void sol() {
-		Arrays.sort(rank, (o1, o2) -> o1[0] - o2[0]);
+		Arrays.sort(rank, (o1, o2) -> o1[0] - o2[0]); // 1차 면접 rank 순으로 정렬
 		int cnt = 0;
-		int r = N + 1;
+		int r = N + 1; // 현재 뽑은 사원 중 제일 낮은 rank를 담을 변수 
 
 		for (int i = 0; i < N; i++) {
-			if (rank[i][1] < r) {
+			if (rank[i][1] < r) { // r보다 더 작다 => 뽑을 수 있는 사람이다
 				cnt++;
-				r = rank[i][1];
+				r = rank[i][1]; // r을 바꿔줌
 			}
 		}
 		
