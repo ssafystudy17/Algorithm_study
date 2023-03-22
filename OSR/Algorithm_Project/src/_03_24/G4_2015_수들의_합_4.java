@@ -41,7 +41,7 @@ public class G4_2015_수들의_합_4 {
 		K = Integer.parseInt(st.nextToken());
 		answer = 0;
 		arr = new int[N];
-		map.put(0, 1);
+		map.put(0, 1); // 0:1을 넣어줘야 첫 배열을 시작할 때 자기 자신이 K인 경우를 셀 수 있음
 
 		st = new StringTokenizer(br.readLine(), " ");
 		for (int i = 0; i < arr.length; i++)
